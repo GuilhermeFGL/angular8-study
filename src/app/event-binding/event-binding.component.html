@@ -7,6 +7,7 @@
 
 <section>
     <mat-checkbox color="warn" (change)="cbChange($event)" [checked]="enable">Disable/Enable</mat-checkbox>
+    &nbsp;
     <mat-form-field>
         <mat-select matNativeControl [disabled]="!enable" (selectionChange)="selectionChange($event)" required>
             <mat-option value="1">Opt 1</mat-option>
@@ -19,6 +20,7 @@
 <section>
     <mat-form-field>
         <input matInput (input)="inputValue = $event.target.value">
-    </mat-form-field>    
+    </mat-form-field>
+    &nbsp;
     You typed: {{inputValue}}
 </section>

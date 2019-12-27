@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,15 +13,18 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PropertyBindingComponent,
     StringInterpolationComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    DataBindingComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,

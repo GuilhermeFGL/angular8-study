@@ -1,0 +1,22 @@
+<h2>Data Binding <small>[( )]</small></h2>
+
+<section>
+    <mat-card style="margin: 12px;">
+        <mat-card-content>
+            <mat-card-title>Agent</mat-card-title>
+            <form>
+                <mat-form-field style="width: 100%;">
+                    <input matInput name="firstName" placeholder="Enter your first name"
+                        [(ngModel)]="person.firstName" />
+                </mat-form-field>
+                <mat-form-field style="width: 100%;">
+                    <input matInput name="lastName" placeholder="Enter your last name" 
+                        [(ngModel)]="person.lastName" />
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            Mr. {{person.lastName}}, {{person.firstName}} {{person.lastName}}
+        </mat-card-actions>
+    </mat-card>
+</section>
