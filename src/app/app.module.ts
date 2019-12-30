@@ -8,7 +8,10 @@ import {
   MatInputModule,
   MatCheckboxModule,
   MatSelectModule,
-  MatRadioModule
+  MatRadioModule,
+  MatListModule,
+  MatFormFieldModule,
+  MatIconModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -19,6 +22,7 @@ import { NgStyleComponent } from './ng-style/ng-style.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,8 @@ import { NgIfComponent } from './ng-if/ng-if.component';
     DataBindingComponent,
     NgStyleComponent,
     NgClassComponent,
-    NgIfComponent
+    NgIfComponent,
+    NgForComponent
   ],
   imports: [
     FormsModule,
@@ -40,7 +45,10 @@ import { NgIfComponent } from './ng-if/ng-if.component';
     MatInputModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
