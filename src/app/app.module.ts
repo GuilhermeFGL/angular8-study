@@ -25,6 +25,7 @@ import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
+import { NgTemplateComponent } from './ng-template/ng-template.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NgSwitchComponent } from './ng-switch/ng-switch.component';
     NgClassComponent,
     NgIfComponent,
     NgForComponent,
-    NgSwitchComponent
+    NgSwitchComponent,
+    NgTemplateComponent
   ],
   imports: [
     FormsModule,

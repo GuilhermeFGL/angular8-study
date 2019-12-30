@@ -1,0 +1,8 @@
+<h2>NG Template <small>else #myTemplate</small></h2>
+
+<mat-checkbox [(ngModel)]="enable">Enable/Disable</mat-checkbox>
+&nbsp;
+<strong>Selected:</strong>
+&nbsp;
+<span *ngIf="enable else myTemplate">Enable</span>
+<ng-template #myTemplate>Disabled<ng-template>
