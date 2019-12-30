@@ -1,0 +1,24 @@
+<h2>NG Container <small></small></h2>
+
+<mat-card class="myCard">
+    <mat-card-content>
+        <ul>
+            <ng-container *ngFor="let user of users">
+                <li *ngIf="user.role == 'admin'">{{user.login}}</li>
+            </ng-container>
+            <mat-list>
+                <h3 mat-sub-header>Users </h3>
+                <ng-container *ngFor="let user of users, let i = index">
+                    <mat-list-item>
+                        <mat-icon mat-list-icon>person</mat-icon>
+                        <h4 mat-line>{{user.login}}</h4>
+                        <h4 mat-line>{{user.role}}</h4>
+                        <h4 mat-line>{{user.lastLogin  | date}}</h4>
+                        <button mat-button color="accent">action</button>
+                    </mat-list-item>
+                    <mat-divider *ngIf="i < users.length - 1"></mat-divider>
+                </ng-container>
+            </mat-list>
+        </ul>
+    </mat-card-content>
+</mat-card>

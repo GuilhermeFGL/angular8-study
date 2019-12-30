@@ -12,7 +12,8 @@ import {
   MatListModule,
   MatFormFieldModule,
   MatIconModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatDividerModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgTemplateComponent } from './ng-template/ng-template.component';
+import { NgContainerComponent } from './ng-container/ng-container.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { NgTemplateComponent } from './ng-template/ng-template.component';
     NgIfComponent,
     NgForComponent,
     NgSwitchComponent,
-    NgTemplateComponent
+    NgTemplateComponent,
+    NgContainerComponent
   ],
   imports: [
     FormsModule,
@@ -54,7 +57,8 @@ import { NgTemplateComponent } from './ng-template/ng-template.component';
     MatListModule,
     MatFormFieldModule,
     MatIconModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
