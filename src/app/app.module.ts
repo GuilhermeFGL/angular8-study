@@ -11,7 +11,8 @@ import {
   MatRadioModule,
   MatListModule,
   MatFormFieldModule,
-  MatIconModule
+  MatIconModule,
+  MatProgressBarModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { NgForComponent } from './ng-for/ng-for.component';
     NgStyleComponent,
     NgClassComponent,
     NgIfComponent,
-    NgForComponent
+    NgForComponent,
+    NgSwitchComponent
   ],
   imports: [
     FormsModule,
@@ -48,7 +51,8 @@ import { NgForComponent } from './ng-for/ng-for.component';
     MatRadioModule,
     MatListModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
