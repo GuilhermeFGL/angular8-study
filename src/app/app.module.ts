@@ -1,18 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatInputModule,
+  MatCheckboxModule,
+  MatSelectModule,
+  MatRadioModule
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
-
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatInputModule } from '@angular/material/input';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatSelectModule } from '@angular/material/select';
+import { NgStyleComponent } from './ng-style/ng-style.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 
 @NgModule({
@@ -21,7 +24,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
     PropertyBindingComponent,
     StringInterpolationComponent,
     EventBindingComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    NgStyleComponent
   ],
   imports: [
     FormsModule,
@@ -31,7 +35,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
     MatCardModule,
     MatInputModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
