@@ -1,0 +1,8 @@
+<h2>Input Binding <small></small></h2>
+
+<p><strong>Input:</strong> {{title}}. {{name}}</p>
+
+<h3>My Persons</h3>
+<section *ngFor="let person of persons">
+    <app-person [person]="person"></app-person>
+</section>
