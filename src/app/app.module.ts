@@ -18,6 +18,7 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
+import { NgIfComponent } from './ng-if/ng-if.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NgClassComponent } from './ng-class/ng-class.component';
     EventBindingComponent,
     DataBindingComponent,
     NgStyleComponent,
-    NgClassComponent
+    NgClassComponent,
+    NgIfComponent
   ],
   imports: [
     FormsModule,
