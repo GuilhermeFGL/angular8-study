@@ -1,0 +1,19 @@
+<h2>NG Class <small>[ngClass]</small></h2>
+
+<mat-card>
+    <mat-card-title>Select</mat-card-title>
+    <mat-card-content>
+        Please, select one class:
+        <mat-form-field>
+            <mat-select name="class" placeholder="Choose the Class:" [(ngModel)]="myClass">
+                <mat-option value="class0">Class 0</mat-option>
+                <mat-option value="class1">Class 1</mat-option>
+                <mat-option value="class2">Class 2</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-card-content>
+    <mat-card-footer>
+        <p>Result</p>
+        <p [ngClass]="myClass">test</p>
+    </mat-card-footer>
+</mat-card>
