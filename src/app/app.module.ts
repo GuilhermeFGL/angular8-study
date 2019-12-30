@@ -31,6 +31,8 @@ import { NgContainerComponent } from './ng-container/ng-container.component';
 import { NgContentComponent } from './ng-content/ng-content.component';
 import { InputBindingComponent } from './input-binding/input-binding.component';
 import { PersonComponent } from './input-binding/person/person.component';
+import { EventEmitterComponent } from './event-emitter/event-emitter.component';
+import { ChildItemComponent } from './event-emitter/child-item/child-item.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { PersonComponent } from './input-binding/person/person.component';
     NgContainerComponent,
     NgContentComponent,
     InputBindingComponent,
-    PersonComponent
+    PersonComponent,
+    EventEmitterComponent,
+    ChildItemComponent
   ],
   imports: [
     FormsModule,

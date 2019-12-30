@@ -1,0 +1,11 @@
+<h2>Event Emitter <small>@Output</small></h2>
+
+<section>Value: {{value}}</section>
+<app-child-item 
+    title="My Title"
+    (plusOne)="incBy(1)"
+    (plusTwo)="incBy(2)"
+    (minusOne)="incBy(-1)"
+    (minusTwo)="incBy(-2)"
+    (inc)="inc($event)">
+</app-child-item>

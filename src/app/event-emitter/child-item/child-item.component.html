@@ -1,0 +1,23 @@
+<h3>{{title}}</h3>
+
+<section>
+    <mat-form-field>
+        <input matInput placeholder="Valut to increment" name="inc" type="number" [(ngModel)]="incValue" />
+    </mat-form-field>
+    <button mat-button color="primary" (click)="incCLick()">Increment</button>
+</section>
+<br />
+<section class="horizontal-buttons">
+    <button mat-raised-button color="primary" (click)="plusOneClick()">
+        <mat-icon>exposure_plus_1</mat-icon>
+    </button>
+    <button mat-raised-button color="primary" (click)="plusTwoClick()">
+        <mat-icon>exposure_plus_2</mat-icon>
+    </button>
+    <button mat-raised-button color="accent" (click)="minusOneClick()">
+        <mat-icon>exposure_neg_1</mat-icon>
+    </button>
+    <button mat-raised-button color="accent" (click)="minusTwoClick()">
+        <mat-icon>exposure_neg_2</mat-icon>
+    </button>
+</section>
