@@ -13,7 +13,8 @@ import {
   MatFormFieldModule,
   MatIconModule,
   MatProgressBarModule,
-  MatDividerModule
+  MatDividerModule,
+  MatChipsModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -37,6 +38,8 @@ import { ViewChildComponent } from './view-child/view-child.component';
 import { TimerComponent } from './view-child/timer/timer.component';
 import { OnChangesComponent } from './on-changes/on-changes.component';
 import { NameComponent } from './on-changes/name/name.component';
+import { MainLifecycleComponent } from './main-lifecycle/main-lifecycle.component';
+import { LifecycleChildComponent } from './main-lifecycle/lifecycle-child/lifecycle-child.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,9 @@ import { NameComponent } from './on-changes/name/name.component';
     ViewChildComponent,
     TimerComponent,
     OnChangesComponent,
-    NameComponent
+    NameComponent,
+    MainLifecycleComponent,
+    LifecycleChildComponent
   ],
   imports: [
     FormsModule,
@@ -76,7 +81,8 @@ import { NameComponent } from './on-changes/name/name.component';
     MatFormFieldModule,
     MatIconModule,
     MatProgressBarModule,
-    MatDividerModule
+    MatDividerModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
