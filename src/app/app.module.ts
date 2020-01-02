@@ -33,6 +33,8 @@ import { InputBindingComponent } from './input-binding/input-binding.component';
 import { PersonComponent } from './input-binding/person/person.component';
 import { EventEmitterComponent } from './event-emitter/event-emitter.component';
 import { ChildItemComponent } from './event-emitter/child-item/child-item.component';
+import { ViewChildComponent } from './view-child/view-child.component';
+import { TimerComponent } from './view-child/timer/timer.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { ChildItemComponent } from './event-emitter/child-item/child-item.compon
     InputBindingComponent,
     PersonComponent,
     EventEmitterComponent,
-    ChildItemComponent
+    ChildItemComponent,
+    ViewChildComponent,
+    TimerComponent
   ],
   imports: [
     FormsModule,
