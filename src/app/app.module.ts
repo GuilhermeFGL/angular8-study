@@ -35,6 +35,8 @@ import { EventEmitterComponent } from './event-emitter/event-emitter.component';
 import { ChildItemComponent } from './event-emitter/child-item/child-item.component';
 import { ViewChildComponent } from './view-child/view-child.component';
 import { TimerComponent } from './view-child/timer/timer.component';
+import { OnChangesComponent } from './on-changes/on-changes.component';
+import { NameComponent } from './on-changes/name/name.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { TimerComponent } from './view-child/timer/timer.component';
     EventEmitterComponent,
     ChildItemComponent,
     ViewChildComponent,
-    TimerComponent
+    TimerComponent,
+    OnChangesComponent,
+    NameComponent
   ],
   imports: [
     FormsModule,

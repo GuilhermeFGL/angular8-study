@@ -8,8 +8,7 @@ import { TimerComponent } from './timer/timer.component';
 })
 export class ViewChildComponent implements OnInit {
 
-  @ViewChild("stopwatch2", {static: false})
-  private myTimer: TimerComponent;
+  @ViewChild("stopwatch2", {static: false}) private myTimer: TimerComponent;
 
   constructor() { }
 

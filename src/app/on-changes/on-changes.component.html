@@ -1,0 +1,30 @@
+<h2>On Changes <small>ngOnChanges(change)</small></h2>
+
+<mat-card class="myCard">
+    <mat-card-content>
+        <section>
+            <mat-form-field>
+                <input matInput placeholder="Your name" [(ngModel)]="name">
+            </mat-form-field>
+            <button mat-icon-button color="primary" (click)="updateName()">
+                <mat-icon>check</mat-icon>
+            </button>
+        </section>
+        <section>
+            <app-name [name]="newName"></app-name>
+        </section>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="myCard">
+    <mat-card-content>
+        <section>
+            <mat-form-field>
+                <input matInput placeholder="Your name" [(ngModel)]="nameIntercepting">
+            </mat-form-field>
+        </section>
+        <section>
+            <app-name [nameIntercepting]="nameIntercepting"></app-name>
+        </section>
+    </mat-card-content>
+</mat-card>
