@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule} from '@angular/flex-layout';
 import {
   MatButtonModule,
   MatCardModule,
@@ -82,7 +83,8 @@ import { LifecycleChildComponent } from './main-lifecycle/lifecycle-child/lifecy
     MatIconModule,
     MatProgressBarModule,
     MatDividerModule,
-    MatChipsModule
+    MatChipsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
