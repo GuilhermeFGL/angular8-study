@@ -15,7 +15,9 @@ import {
   MatIconModule,
   MatProgressBarModule,
   MatDividerModule,
-  MatChipsModule
+  MatChipsModule,
+  MatTabsModule,
+  MatTableModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -41,6 +43,9 @@ import { OnChangesComponent } from './on-changes/on-changes.component';
 import { NameComponent } from './on-changes/name/name.component';
 import { MainLifecycleComponent } from './main-lifecycle/main-lifecycle.component';
 import { LifecycleChildComponent } from './main-lifecycle/lifecycle-child/lifecycle-child.component';
+import { ProductFormComponent } from './service/product-form/product-form.component';
+import { DepartmentFormComponent } from './service/department-form/department-form.component';
+import { ProductTableComponent } from './service/product-table/product-table.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +71,10 @@ import { LifecycleChildComponent } from './main-lifecycle/lifecycle-child/lifecy
     OnChangesComponent,
     NameComponent,
     MainLifecycleComponent,
-    LifecycleChildComponent
+    LifecycleChildComponent,
+    ProductFormComponent,
+    DepartmentFormComponent,
+    ProductTableComponent
   ],
   imports: [
     FormsModule,
@@ -84,7 +92,9 @@ import { LifecycleChildComponent } from './main-lifecycle/lifecycle-child/lifecy
     MatProgressBarModule,
     MatDividerModule,
     MatChipsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatTabsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
