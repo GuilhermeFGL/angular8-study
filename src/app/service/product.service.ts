@@ -30,7 +30,6 @@ export class ProductService {
   }
 
   getProducts(): Product[] {
-    console.log(this.products);
     return this.products;
   }
   

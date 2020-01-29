@@ -46,6 +46,7 @@ import { LifecycleChildComponent } from './main-lifecycle/lifecycle-child/lifecy
 import { ProductFormComponent } from './service/product-form/product-form.component';
 import { DepartmentFormComponent } from './service/department-form/department-form.component';
 import { ProductTableComponent } from './service/product-table/product-table.component';
+import { BasicObservableComponent } from './observable/basic-observable/basic-observable.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { ProductTableComponent } from './service/product-table/product-table.com
     LifecycleChildComponent,
     ProductFormComponent,
     DepartmentFormComponent,
-    ProductTableComponent
+    ProductTableComponent,
+    BasicObservableComponent
   ],
   imports: [
     FormsModule,
