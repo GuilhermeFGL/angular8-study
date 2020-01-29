@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, Observer, Subscription } from 'rxjs';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Observable, Observer, Subscription, fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-basic-observable',
@@ -7,6 +7,8 @@ import { Observable, Observer, Subscription } from 'rxjs';
   styleUrls: ['./basic-observable.component.css']
 })
 export class BasicObservableComponent implements OnInit {
+
+  @ViewChild('hotBtn', { static: false }) hotBtn: ElementRef;
 
   output: string[] = [];
   asynchronousSubscription: Subscription;
@@ -16,6 +18,14 @@ export class BasicObservableComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    fromEvent(
+      this.hotBtn.nativeElement, 'click').subscribe((e) => {
+        this.clear();
+        this.output.push("Hot Observable");
+      });
   }
 
   clear() {
