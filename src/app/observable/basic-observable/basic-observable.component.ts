@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { Observable, Observer, Subscription, fromEvent } from 'rxjs';
+import { Observable, Observer, Subscription, fromEvent, ConnectableObservable } from 'rxjs';
+import { publish, share } from 'rxjs/operators';
 
 @Component({
   selector: 'app-basic-observable',
@@ -66,7 +67,7 @@ export class BasicObservableComponent implements OnInit {
         let i: number = 0;
         let id = setInterval(() => {
           i++;
-          this.output.push(`From observable: ${i}`)
+          this.output.push(`From observable: ${i}`);
           if (i == 10) {
             observer.complete();
           } else if (i % 2 == 0) {
@@ -93,7 +94,7 @@ export class BasicObservableComponent implements OnInit {
         let i: number = 0;
         let id = setInterval(() => {
           i++;
-          this.output.push(`From observable: ${i}`)
+          this.output.push(`From observable: ${i}`);
           if (i == 10) {
             observer.complete();
           } else if (i % 2 == 0) {
@@ -120,6 +121,67 @@ export class BasicObservableComponent implements OnInit {
         () => { this.output.push('Complete 2') });
       clearInterval(interval);
     }, 300);
-
   }
+
+  myPublish() {
+    const observable = new Observable(
+      (observer: Observer<any>) => {
+        let i: number = 0;
+        let id = setInterval(() => {
+          i++;
+          this.output.push(`From publish: ${i}`);
+          if (i == 10) {
+            observer.complete();
+          } else if (i % 2 == 0) {
+            observer.next(1);
+          }
+        }, 500);
+        return () => {
+          clearInterval(id);
+        };
+      }
+    );
+
+    const multcasted: ConnectableObservable<number> = observable.pipe(publish()) as ConnectableObservable<number>;
+
+    this.output.push('waiting for interval...');
+    let interval = setTimeout(() => {
+      multcasted.connect();
+      multcasted.subscribe((_n) => {
+        this.output.push('connected');
+      });
+      clearInterval(interval);
+    }, 300);
+  }
+
+  myShare() {
+    const observable = new Observable(
+      (observer: Observer<any>) => {
+        let i: number = 0;
+        let id = setInterval(() => {
+          i++;
+          this.output.push(`From share: ${i}`);
+          if (i == 10) {
+            observer.complete();
+          } else if (i % 2 == 0) {
+            observer.next(1);
+          }
+        }, 500);
+        return () => {
+          clearInterval(id);
+        };
+      }
+    );
+
+    const multcasted: ConnectableObservable<number> = observable.pipe(share()) as ConnectableObservable<number>;
+
+    this.output.push('waiting for interval...');
+    let interval = setTimeout(() => {
+      multcasted.subscribe((_n) => {
+        this.output.push('connected');
+      });
+      clearInterval(interval);
+    }, 300);
+  }
+
 }
