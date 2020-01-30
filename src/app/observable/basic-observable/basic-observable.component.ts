@@ -22,11 +22,7 @@ export class BasicObservableComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    fromEvent(
-      this.hotBtn.nativeElement, 'click').subscribe((e) => {
-        this.clear();
-        this.output.push("Hot Observable");
-      });
+    this.hotObservable();
   }
 
   clear() {
@@ -121,6 +117,14 @@ export class BasicObservableComponent implements OnInit {
         () => { this.output.push('Complete 2') });
       clearInterval(interval);
     }, 300);
+  }
+
+  hotObservable() {
+    fromEvent(
+      this.hotBtn.nativeElement, 'click').subscribe((e) => {
+        this.clear();
+        this.output.push("Hot Observable");
+      });
   }
 
   myPublish() {

@@ -47,6 +47,8 @@ import { ProductFormComponent } from './service/product-form/product-form.compon
 import { DepartmentFormComponent } from './service/department-form/department-form.component';
 import { ProductTableComponent } from './service/product-table/product-table.component';
 import { BasicObservableComponent } from './observable/basic-observable/basic-observable.component';
+import { SubjectComponent } from './observable/subject/subject.component';
+import { SubjectChildComponent } from './observable/subject/subject-child/subject-child.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,9 @@ import { BasicObservableComponent } from './observable/basic-observable/basic-ob
     ProductFormComponent,
     DepartmentFormComponent,
     ProductTableComponent,
-    BasicObservableComponent
+    BasicObservableComponent,
+    SubjectComponent,
+    SubjectChildComponent
   ],
   imports: [
     FormsModule,
