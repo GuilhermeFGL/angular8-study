@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BasicObservableComponent } from './basic-observable.component';
+import { ObservableComponent } from './observable.component';
 
 describe('BasicObservableComponent', () => {
-  let component: BasicObservableComponent;
-  let fixture: ComponentFixture<BasicObservableComponent>;
+  let component: ObservableComponent;
+  let fixture: ComponentFixture<ObservableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BasicObservableComponent ]
+      declarations: [ ObservableComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BasicObservableComponent);
+    fixture = TestBed.createComponent(ObservableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

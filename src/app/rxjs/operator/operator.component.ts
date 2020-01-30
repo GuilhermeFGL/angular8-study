@@ -3,11 +3,11 @@ import { from } from 'rxjs';
 import { map, delay } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-map-delay',
-  templateUrl: './map-delay.component.html',
-  styleUrls: ['./map-delay.component.css']
+  selector: 'app-operator',
+  templateUrl: './operator.component.html',
+  styleUrls: ['./operator.component.css']
 })
-export class MapDelayComponent implements OnInit {
+export class OperatorComponent implements OnInit {
 
   outputs: string[] = [];
 
@@ -16,10 +16,24 @@ export class MapDelayComponent implements OnInit {
   ngOnInit() {
   }
 
+  clear() {
+    this.outputs = [];
+  }
+
   mapClick() {
+    this.clear();
     from([1, 2, 3, 4, 5])
       .pipe(
         map(i => `Number: ${i.toString()}`),
+      ).subscribe(i => this.outputs.push(i));
+  }
+
+
+  delayClick() {
+    this.clear();
+    from([1, 2, 3, 4, 5])
+      .pipe(
+        map(i => i.toString()),
         delay(1000)
       ).subscribe(i => this.outputs.push(i));
   }

@@ -1,4 +1,4 @@
-<h2>Observable <small></small></h2>
+<h2>Observables <small></small></h2>
 
 <button mat-raised-button color="primary" (click)="basic()">basic</button>&nbsp;
 <button mat-raised-button color="primary" (click)="asynchronous()">asynchronous</button>&nbsp;
@@ -7,7 +7,9 @@
 <button mat-raised-button color="primary" (click)="myPublish()">publish</button>&nbsp;
 <button mat-raised-button color="primary" (click)="myShare()">share</button>&nbsp;
 
-<p>Output:</p>
-<ul>
-    <li *ngFor="let o of output">{{o}}</li>
-</ul>
+<div style="max-height: 200px; overflow: scroll;">
+    <p>Output:</p>
+    <ul>
+        <li *ngFor="let o of output">{{o}}</li>
+    </ul>
+</div>

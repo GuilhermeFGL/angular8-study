@@ -3,11 +3,11 @@ import { Observable, Observer, Subscription, fromEvent, ConnectableObservable } 
 import { publish, share } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-basic-observable',
-  templateUrl: './basic-observable.component.html',
-  styleUrls: ['./basic-observable.component.css']
+  selector: 'app-observable',
+  templateUrl: './observable.component.html',
+  styleUrls: ['./observable.component.css']
 })
-export class BasicObservableComponent implements OnInit {
+export class ObservableComponent implements OnInit {
 
   @ViewChild('hotBtn', { static: false }) hotBtn: ElementRef;
 

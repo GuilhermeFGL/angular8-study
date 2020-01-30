@@ -46,10 +46,10 @@ import { LifecycleChildComponent } from './main-lifecycle/lifecycle-child/lifecy
 import { ProductFormComponent } from './service/product-form/product-form.component';
 import { DepartmentFormComponent } from './service/department-form/department-form.component';
 import { ProductTableComponent } from './service/product-table/product-table.component';
-import { BasicObservableComponent } from './observable/basic-observable/basic-observable.component';
-import { SubjectComponent } from './observable/subject/subject.component';
-import { SubjectChildComponent } from './observable/subject/subject-child/subject-child.component';
-import { MapDelayComponent } from './operator/map-delay/map-delay.component';
+import { ObservableComponent } from './rxjs/observable/observable.component';
+import { SubjectComponent } from './rxjs/subject/subject.component';
+import { SubjectChildComponent } from './rxjs/subject/subject-child/subject-child.component';
+import { OperatorComponent } from './rxjs/operator/operator.component';
 
 @NgModule({
   declarations: [
@@ -79,10 +79,10 @@ import { MapDelayComponent } from './operator/map-delay/map-delay.component';
     ProductFormComponent,
     DepartmentFormComponent,
     ProductTableComponent,
-    BasicObservableComponent,
+    ObservableComponent,
     SubjectComponent,
     SubjectChildComponent,
-    MapDelayComponent
+    OperatorComponent
   ],
   imports: [
     FormsModule,

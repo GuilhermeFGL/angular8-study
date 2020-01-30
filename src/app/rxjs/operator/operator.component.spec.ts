@@ -1,20 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { OperatorComponent } from './operator.component';
 
-import { MapDelayComponent } from './map-delay.component';
-
-describe('MapDelayComponent', () => {
-  let component: MapDelayComponent;
-  let fixture: ComponentFixture<MapDelayComponent>;
+describe('OperatorComponent', () => {
+  let component: OperatorComponent;
+  let fixture: ComponentFixture<OperatorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MapDelayComponent ]
+      declarations: [ OperatorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MapDelayComponent);
+    fixture = TestBed.createComponent(OperatorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
