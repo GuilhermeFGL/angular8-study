@@ -49,6 +49,7 @@ import { ProductTableComponent } from './service/product-table/product-table.com
 import { BasicObservableComponent } from './observable/basic-observable/basic-observable.component';
 import { SubjectComponent } from './observable/subject/subject.component';
 import { SubjectChildComponent } from './observable/subject/subject-child/subject-child.component';
+import { MapDelayComponent } from './operator/map-delay/map-delay.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { SubjectChildComponent } from './observable/subject/subject-child/subjec
     ProductTableComponent,
     BasicObservableComponent,
     SubjectComponent,
-    SubjectChildComponent
+    SubjectChildComponent,
+    MapDelayComponent
   ],
   imports: [
     FormsModule,

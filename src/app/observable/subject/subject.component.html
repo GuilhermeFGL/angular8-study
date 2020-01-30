@@ -4,7 +4,7 @@
 <button mat-raised-button color="primary" (click)="connect()">Connect Service</button>
 <hr />
 
-<div style="width: 100%; display: flex;">
+<div style="width: 100%; display: flex; overflow: scroll;">
     <app-subject-child name="Subject" [subject]="subject"></app-subject-child>
     <app-subject-child name="Reply Subject" [subject]="replySubject"></app-subject-child>
     <app-subject-child name="Async Subject" [subject]="asyncSubject"></app-subject-child>
