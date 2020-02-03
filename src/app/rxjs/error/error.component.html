@@ -1,0 +1,6 @@
+<h2>Error Handling <small></small></h2>
+
+<button mat-raised-button color="accent" (click)="start()">Start error handling</button>
+<ul *ngIf="started">
+    <li *ngFor="let o of output">{{o}}</li>
+</ul>

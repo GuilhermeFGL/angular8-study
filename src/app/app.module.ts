@@ -52,6 +52,7 @@ import { SubjectComponent } from './rxjs/subject/subject.component';
 import { SubjectChildComponent } from './rxjs/subject/subject-child/subject-child.component';
 import { OperatorComponent } from './rxjs/operator/operator.component';
 import { AsyncComponent } from './rxjs/async/async.component';
+import { ErrorComponent } from './rxjs/error/error.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { AsyncComponent } from './rxjs/async/async.component';
     SubjectComponent,
     SubjectChildComponent,
     OperatorComponent,
-    AsyncComponent
+    AsyncComponent,
+    ErrorComponent
   ],
   imports: [
     FormsModule,
