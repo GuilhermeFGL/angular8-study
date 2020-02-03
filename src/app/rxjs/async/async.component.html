@@ -1,0 +1,15 @@
+<h2>Async <small>| async</small></h2>
+
+<button mat-raised-button color="accent" (click)="start()" *ngIf="!started">Start async</button>
+<mat-card *ngIf="started">
+    <mat-card-title>Name and login</mat-card-title>
+    <mat-card-content>
+        <div *ngIf="user$|async as user; else loadinguser">
+            <p>Name: {{user.name}}</p>
+            <p>Login: {{user.login}}</p>
+        </div>
+        <ng-template #loadinguser>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </ng-template>
+    </mat-card-content>
+</mat-card>
