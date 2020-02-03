@@ -17,7 +17,8 @@ import {
   MatDividerModule,
   MatChipsModule,
   MatTabsModule,
-  MatTableModule
+  MatTableModule,
+  MatRippleModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -102,7 +103,8 @@ import { OperatorComponent } from './rxjs/operator/operator.component';
     MatChipsModule,
     FlexLayoutModule,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

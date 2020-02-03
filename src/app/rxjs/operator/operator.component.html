@@ -1,9 +1,19 @@
-<h2>Operators<small></small></h2>
+<h2>Operators <small>pipe()</small></h2>
 
 <button mat-raised-button color="primary" (click)="mapClick()">Map</button>&nbsp;
 <button mat-raised-button color="primary" (click)="delayClick()">Delay</button>&nbsp;
+<button mat-raised-button color="primary" (click)="filterClick()">Filter</button>&nbsp;
+<button mat-raised-button color="primary" (click)="tapClick()">Tap</button>&nbsp;
+<button mat-raised-button color="primary" (click)="takeClick()">Take</button>&nbsp;
+<button mat-raised-button color="primary" (click)="firstClick()">First</button>&nbsp;
+<button mat-raised-button color="primary" (click)="lastClick()">Last</button>&nbsp;
+<button mat-raised-button color="primary" (click)="takeWhileClick()">Take While</button>&nbsp;
+<button mat-raised-button color="primary" (click)="takeUntilClick()">Take Until</button>&nbsp;
+<button mat-raised-button color="accent" (click)="debounceTimeClick()">Debounce Time</button>&nbsp;
 
+<p>Input: [{{input}}]</p>
 <p>Output:</p>
 <ul>
     <li *ngFor="let s of outputs">{{s}}</li>
 </ul>
+<div class="debounce-area" matRipple matRippleCentered="true" matRippleColor="rgb(240, 140, 140, 0.5)"></div>
