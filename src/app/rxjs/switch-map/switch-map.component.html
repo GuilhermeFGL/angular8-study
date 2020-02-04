@@ -1,0 +1,27 @@
+<h2>Switch/Merge Map <small></small></h2>
+
+<div fxLayout="column" fxLayoutAlign="start stretch">
+    <section>
+        <p>Select operator:</p>
+        <mat-radio-group name="operator" [(ngModel)]="operator" (change)="selectOperator()">
+            <mat-radio-button value="merge">Merge Map&nbsp;</mat-radio-button>
+            <mat-radio-button value="switch">Switch Map</mat-radio-button>
+        </mat-radio-group>
+    </section>
+    <div>
+        <mat-form-field fxFlex="100" style="margin:20px;">
+            <mat-label>Search by:</mat-label>
+            <input #searchBy matInput placeholder="Type something" autocomplete="off" [(ngModel)]="searchInput">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-list>
+            <mat-list-item *ngFor="let p of people$ | async ">
+                <h3 matLine>{{p.lastName}}, {{p.firstName}}</h3>
+                <p matLine>{{p.email}}</p>
+                <p matLine>City: {{p.city}}</p>
+                <p matLine>Country: {{p.country}}</p>
+            </mat-list-item>
+        </mat-list>
+    </div>
+</div>

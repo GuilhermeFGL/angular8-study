@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule} from '@angular/flex-layout';
 import {
@@ -53,6 +54,7 @@ import { SubjectChildComponent } from './rxjs/subject/subject-child/subject-chil
 import { OperatorComponent } from './rxjs/operator/operator.component';
 import { AsyncComponent } from './rxjs/async/async.component';
 import { ErrorComponent } from './rxjs/error/error.component';
+import { SwitchMapComponent } from './rxjs/switch-map/switch-map.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +89,8 @@ import { ErrorComponent } from './rxjs/error/error.component';
     SubjectChildComponent,
     OperatorComponent,
     AsyncComponent,
-    ErrorComponent
+    ErrorComponent,
+    SwitchMapComponent
   ],
   imports: [
     FormsModule,
@@ -108,7 +111,8 @@ import { ErrorComponent } from './rxjs/error/error.component';
     FlexLayoutModule,
     MatTabsModule,
     MatTableModule,
-    MatRippleModule
+    MatRippleModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
