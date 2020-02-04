@@ -12,6 +12,7 @@
     "faker": "^4.1.0"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "mongo": "^0.1.0"
   }
 }
