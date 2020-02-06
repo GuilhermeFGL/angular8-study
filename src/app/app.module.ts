@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FlexLayoutModule} from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import {
   MatButtonModule,
   MatCardModule,
@@ -20,7 +20,8 @@ import {
   MatTabsModule,
   MatTableModule,
   MatRippleModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatDialogModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -57,6 +58,7 @@ import { AsyncComponent } from './rxjs/async/async.component';
 import { ErrorComponent } from './rxjs/error/error.component';
 import { SwitchMapComponent } from './rxjs/switch-map/switch-map.component';
 import { HttpComponent } from './http/http.component';
+import { DialogEditComponent } from './http/dialog-edit/dialog-edit.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +95,8 @@ import { HttpComponent } from './http/http.component';
     AsyncComponent,
     ErrorComponent,
     SwitchMapComponent,
-    HttpComponent
+    HttpComponent,
+    DialogEditComponent
   ],
   imports: [
     FormsModule,
@@ -116,9 +119,13 @@ import { HttpComponent } from './http/http.component';
     MatTableModule,
     MatRippleModule,
     MatSnackBarModule,
+    MatDialogModule,
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    DialogEditComponent
+  ]
 })
 export class AppModule { }
