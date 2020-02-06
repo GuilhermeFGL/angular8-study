@@ -11,7 +11,7 @@ app.use(cors());
 
 mongoose.connect(
     'mongodb://localhost:27017/http_client',
-    { useNewUrlParser: true });
+    { useNewUrlParser: true, useUnifiedTopology: true });
 
 var myLogger = function (req, res, next) {
     console.log(req.body);

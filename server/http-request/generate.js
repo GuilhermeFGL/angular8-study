@@ -4,7 +4,7 @@ var Faker = require('faker');
 
 mongoose.connect(
     'mongodb://localhost:27017/http_client',
-    { useNewUrlParser: true });
+    { useNewUrlParser: true, useUnifiedTopology: true });
 
 async function generateProducts() {
     for (let i = 0; i < 10; i++) {
@@ -25,4 +25,4 @@ generateProducts()
     .then(() => {
         mongoose.disconnect();
         console.log("OK");
-    })
+    });
