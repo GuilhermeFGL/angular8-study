@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { ProductService } from '../product.service';
 import { Product } from '../product.model';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-http-get',
@@ -12,9 +13,11 @@ import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 export class HttpGetComponent implements OnInit {
 
   simpleRequestProduct$: Observable<Product[]>;
-  productsErrorHandling: Product[];
-  productsLoading: Product[];
-  productsId: Product[];
+  productsErrorHandling: Product[] = [];
+  productsLoading: Product[] = [];
+  productsId: Product[] = [];
+  newlyProducts: Product[] = [];
+  productsToDelete: Product[] = [];
   isLoading: boolean = false;
 
   constructor(private productService: ProductService,
@@ -39,16 +42,9 @@ export class HttpGetComponent implements OnInit {
 
   getProductsErrorHandlingError() {
     this.productService.getProductsError()
-      .subscribe((prods) => { this.productsErrorHandling = prods },
-        (err) => {
-          let config = new MatSnackBarConfig();
-          config.duration = 2000;
-          if (err.status === 0) {
-            this.snackBar.open('Could not connect to the server', '', config);
-          } else {
-            this.snackBar.open(err.error.msg, '', config);
-          }
-        });
+      .subscribe(
+        (prods) => { this.productsErrorHandling = prods },
+        (err) => { this.showErrorMessage(err); });
   }
 
   getProductsLoading() {
@@ -79,6 +75,41 @@ export class HttpGetComponent implements OnInit {
         this.productsId[index].name = prodName;
       }
     });
+  }
+
+  postProduct(name: string, department: string, price: number) {
+    let newProduct: Product = { name, department, price };
+    this.productService.saveProduct(newProduct).subscribe(
+      (prod: Product) => { this.newlyProducts.push(prod); },
+      (err) => { this.showErrorMessage(err); });
+  }
+
+  getProductsToDelete() {
+    this.productService.getProducts().subscribe((prods) => this.productsToDelete = prods);
+  }
+
+  deleteProduct(product: Product) {
+    this.productService.deleteProduct(product).subscribe(
+      () => {
+        let index = this.productsToDelete.findIndex((p) => p._id === product._id);
+        if (index >= 0) {
+          this.productsToDelete.splice(index);
+          let config = new MatSnackBarConfig();
+          config.duration = 2000;
+          this.snackBar.open('Products successfuly loaded', '', config);
+        }
+      }, (error) => this.showErrorMessage(error));
+  }
+
+  private showErrorMessage(err: HttpErrorResponse) {
+    let config = new MatSnackBarConfig();
+    config.duration = 2000;
+    if (err.status === 0) {
+      this.snackBar.open('Could not connect to the server', '', config);
+    }
+    else {
+      this.snackBar.open(err.error.msg, '', config);
+    }
   }
 
 }

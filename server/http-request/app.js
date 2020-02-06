@@ -14,6 +14,7 @@ mongoose.connect(
     { useNewUrlParser: true, useUnifiedTopology: true });
 
 var myLogger = function (req, res, next) {
+    console.log(req.path);
     console.log(req.body);
     next();
 };
