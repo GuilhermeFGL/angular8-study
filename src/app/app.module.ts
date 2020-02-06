@@ -56,7 +56,7 @@ import { OperatorComponent } from './rxjs/operator/operator.component';
 import { AsyncComponent } from './rxjs/async/async.component';
 import { ErrorComponent } from './rxjs/error/error.component';
 import { SwitchMapComponent } from './rxjs/switch-map/switch-map.component';
-import { HttpGetComponent } from './http/http-get/http-get.component';
+import { HttpComponent } from './http/http.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +93,7 @@ import { HttpGetComponent } from './http/http-get/http-get.component';
     AsyncComponent,
     ErrorComponent,
     SwitchMapComponent,
-    HttpGetComponent
+    HttpComponent
   ],
   imports: [
     FormsModule,

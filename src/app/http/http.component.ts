@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { ProductService } from '../product.service';
-import { Product } from '../product.model';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 import { HttpErrorResponse } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Product } from './product.model';
+import { ProductService } from './product.service';
 
 @Component({
-  selector: 'app-http-get',
-  templateUrl: './http-get.component.html',
-  styleUrls: ['./http-get.component.css']
+  selector: 'app-http',
+  templateUrl: './http.component.html',
+  styleUrls: ['./http.component.css']
 })
-export class HttpGetComponent implements OnInit {
+export class HttpComponent implements OnInit {
 
   simpleRequestProduct$: Observable<Product[]>;
   productsErrorHandling: Product[] = [];
