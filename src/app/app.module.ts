@@ -19,7 +19,8 @@ import {
   MatChipsModule,
   MatTabsModule,
   MatTableModule,
-  MatRippleModule
+  MatRippleModule,
+  MatSnackBarModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -114,6 +115,7 @@ import { HttpGetComponent } from './http/http-get/http-get.component';
     MatTabsModule,
     MatTableModule,
     MatRippleModule,
+    MatSnackBarModule,
     HttpClientModule
   ],
   providers: [],
