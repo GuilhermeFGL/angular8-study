@@ -62,6 +62,7 @@ import { SwitchMapComponent } from './rxjs/switch-map/switch-map.component';
 import { HttpComponent } from './http/http.component';
 import { DialogEditComponent } from './http/dialog-edit/dialog-edit.component';
 import { DrivenComponent } from './form/driven/driven.component';
+import { ValidationComponent } from './form/validation/validation.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +101,8 @@ import { DrivenComponent } from './form/driven/driven.component';
     SwitchMapComponent,
     HttpComponent,
     DialogEditComponent,
-    DrivenComponent
+    DrivenComponent,
+    ValidationComponent
   ],
   imports: [
     FormsModule,
