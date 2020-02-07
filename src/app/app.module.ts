@@ -64,6 +64,7 @@ import { DialogEditComponent } from './http/dialog-edit/dialog-edit.component';
 import { DrivenComponent } from './form/driven/driven.component';
 import { ValidationComponent } from './form/validation/validation.component';
 import { ControlComponent } from './form/reative/control/control.component';
+import { GroupComponent } from './form/reative/group/group.component';
 
 @NgModule({
   declarations: [
@@ -104,7 +105,8 @@ import { ControlComponent } from './form/reative/control/control.component';
     DialogEditComponent,
     DrivenComponent,
     ValidationComponent,
-    ControlComponent
+    ControlComponent,
+    GroupComponent
   ],
   imports: [
     FormsModule,
