@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -63,6 +63,7 @@ import { HttpComponent } from './http/http.component';
 import { DialogEditComponent } from './http/dialog-edit/dialog-edit.component';
 import { DrivenComponent } from './form/driven/driven.component';
 import { ValidationComponent } from './form/validation/validation.component';
+import { ControlComponent } from './form/reative/control/control.component';
 
 @NgModule({
   declarations: [
@@ -102,10 +103,12 @@ import { ValidationComponent } from './form/validation/validation.component';
     HttpComponent,
     DialogEditComponent,
     DrivenComponent,
-    ValidationComponent
+    ValidationComponent,
+    ControlComponent
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
