@@ -67,6 +67,7 @@ import { ControlComponent } from './form/reative/control/control.component';
 import { GroupComponent } from './form/reative/group/group.component';
 import { BuilderComponent } from './form/reative/builder/builder.component';
 import { ArrayComponent } from './form/reative/array/array.component';
+import { ReactiveValidationComponent } from './form/reative/reactive-validation/reactive-validation.component';
 
 @NgModule({
   declarations: [
@@ -110,7 +111,8 @@ import { ArrayComponent } from './form/reative/array/array.component';
     ControlComponent,
     GroupComponent,
     BuilderComponent,
-    ArrayComponent
+    ArrayComponent,
+    ReactiveValidationComponent
   ],
   imports: [
     FormsModule,
