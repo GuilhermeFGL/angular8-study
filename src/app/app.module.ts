@@ -66,6 +66,7 @@ import { ValidationComponent } from './form/validation/validation.component';
 import { ControlComponent } from './form/reative/control/control.component';
 import { GroupComponent } from './form/reative/group/group.component';
 import { BuilderComponent } from './form/reative/builder/builder.component';
+import { ArrayComponent } from './form/reative/array/array.component';
 
 @NgModule({
   declarations: [
@@ -108,7 +109,8 @@ import { BuilderComponent } from './form/reative/builder/builder.component';
     ValidationComponent,
     ControlComponent,
     GroupComponent,
-    BuilderComponent
+    BuilderComponent,
+    ArrayComponent
   ],
   imports: [
     FormsModule,
