@@ -21,7 +21,9 @@ import {
   MatTableModule,
   MatRippleModule,
   MatSnackBarModule,
-  MatDialogModule
+  MatDialogModule,
+  MatDatepickerModule,
+  MatNativeDateModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -59,6 +61,7 @@ import { ErrorComponent } from './rxjs/error/error.component';
 import { SwitchMapComponent } from './rxjs/switch-map/switch-map.component';
 import { HttpComponent } from './http/http.component';
 import { DialogEditComponent } from './http/dialog-edit/dialog-edit.component';
+import { DrivenComponent } from './form/driven/driven.component';
 
 @NgModule({
   declarations: [
@@ -96,7 +99,8 @@ import { DialogEditComponent } from './http/dialog-edit/dialog-edit.component';
     ErrorComponent,
     SwitchMapComponent,
     HttpComponent,
-    DialogEditComponent
+    DialogEditComponent,
+    DrivenComponent
   ],
   imports: [
     FormsModule,
@@ -120,6 +124,8 @@ import { DialogEditComponent } from './http/dialog-edit/dialog-edit.component';
     MatRippleModule,
     MatSnackBarModule,
     MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     HttpClientModule
   ],
   providers: [],
