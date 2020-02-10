@@ -1,0 +1,13 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+var productSchema = new Schema({
+    name: String,
+    price: Number,
+    stoke: Number,
+    departments: [{
+        type: mongoose.Schema.Types.ObjectId, ref: 'Department'
+    }]
+}, { versionKey: false });
+
+module.exports = mongoose.model("Product", productSchema);
