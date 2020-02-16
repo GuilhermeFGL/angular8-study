@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -27,6 +26,7 @@ import {
   MatNativeDateModule
 } from '@angular/material';
 
+import { RoutingModule } from './routing.module';
 import { AppComponent } from './app.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
@@ -71,16 +71,6 @@ import { ArrayComponent } from './form/reative/array/array.component';
 import { ReactiveValidationComponent } from './form/reative/reactive-validation/reactive-validation.component';
 import { ProductComponent } from './crud/product/product.component';
 import { DepartmentComponent } from './crud/department/department.component';
-import { BookComponent } from './route/book/book.component';
-import { DvdComponent } from './route/dvd/dvd.component';
-import { PageNotFoundComponent } from './route/page-not-found/page-not-found.component';
-
-const appRoutes: Routes = [
-  { path: 'dvds', component: DvdComponent },
-  { path: 'books', component: BookComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'dvds' },
-  { path: '**', component: PageNotFoundComponent }
-];
 
 @NgModule({
   declarations: [
@@ -127,15 +117,13 @@ const appRoutes: Routes = [
     ArrayComponent,
     ReactiveValidationComponent,
     ProductComponent,
-    DepartmentComponent,
-    BookComponent,
-    DvdComponent,
-    PageNotFoundComponent
+    DepartmentComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
+    RoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
@@ -158,7 +146,6 @@ const appRoutes: Routes = [
     MatDialogModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
