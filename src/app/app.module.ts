@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -70,6 +71,16 @@ import { ArrayComponent } from './form/reative/array/array.component';
 import { ReactiveValidationComponent } from './form/reative/reactive-validation/reactive-validation.component';
 import { ProductComponent } from './crud/product/product.component';
 import { DepartmentComponent } from './crud/department/department.component';
+import { BookComponent } from './route/book/book.component';
+import { DvdComponent } from './route/dvd/dvd.component';
+import { PageNotFoundComponent } from './route/page-not-found/page-not-found.component';
+
+const appRoutes: Routes = [
+  { path: 'dvds', component: DvdComponent },
+  { path: 'books', component: BookComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'dvds' },
+  { path: '**', component: PageNotFoundComponent }
+];
 
 @NgModule({
   declarations: [
@@ -116,9 +127,13 @@ import { DepartmentComponent } from './crud/department/department.component';
     ArrayComponent,
     ReactiveValidationComponent,
     ProductComponent,
-    DepartmentComponent
+    DepartmentComponent,
+    BookComponent,
+    DvdComponent,
+    PageNotFoundComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,

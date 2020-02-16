@@ -72,5 +72,12 @@
         <app-department fxFlex="40"></app-department>
         <app-product fxFlex="55"></app-product>
     </div>
+    <hr />
+
+    <h1>Route</h1>
+    <a mat-raised-button routerLink="dvds" routerLinkActive="mat-accent">DVD</a>
+    <a mat-raised-button routerLink="books" routerLinkActive="mat-accent">Book</a>
+    <a mat-raised-button href="/notFound">Page Not Found</a>
+    <router-outlet></router-outlet>
 
 </div>
