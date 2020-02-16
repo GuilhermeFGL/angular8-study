@@ -41,7 +41,6 @@ export class DepartmentComponent implements OnInit {
           this.notify('Department updated');
         }, (error) => {
           this.notify('Error');
-          console.log(error)
         });
     } else {
       this.departmentService.add({
@@ -52,7 +51,6 @@ export class DepartmentComponent implements OnInit {
           this.notify('Department created');
         }, (error) => {
           this.notify('Error');
-          console.log(error)
         });
     }
   }
@@ -72,8 +70,7 @@ export class DepartmentComponent implements OnInit {
         this.clear();
         this.notify('Department removed');
       }, (error) => {
-        this.notify('Error');
-        console.log(error)
+        this.notify(error.error.msg);
       });
   }
 

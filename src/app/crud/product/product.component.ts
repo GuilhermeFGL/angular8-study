@@ -53,20 +53,30 @@ export class ProductComponent implements OnInit {
     let product = this.productForm.value;
     if (product._id != null) {
       this.productService.update(product)
-        .subscribe((updatedProduct) => this.notify("Product Updated!"));
+        .subscribe((updatedProduct) => {
+          this.notify("Product Updated!");
+          this.resetForm();
+        }, (error) => {
+          this.notify('Error');
+        });
     } else {
       this.productService.add(product)
-        .subscribe((newProduct) => this.notify("Product Inserted!"));
+        .subscribe((newProduct) => {
+          this.notify("Product Inserted!");
+          this.resetForm();
+        }, (error) => {
+          this.notify('Error');
+        });
     }
-    this.resetForm();
   }
 
   delete(product: Product) {
     this.productService.delete(product)
       .subscribe(
         () => this.notify("Product Deleted!"),
-        (err) => console.log(err)
-      );
+        (error) => {
+          this.notify('Error');
+        });
   }
 
   edit(product: Product) {
